@@ -3,7 +3,7 @@ buildscript {
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.2.3'
+    classpath 'com.android.tools.build:gradle:2.3.3'
     classpath 'me.tatarka:gradle-retrolambda:3.4.0'
     classpath 'me.tatarka.retrolambda.projectlombok:lombok.ast:0.2.3.a2'
     classpath 'com.github.ben-manes:gradle-versions-plugin:0.13.0'
@@ -18,12 +18,9 @@ apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'com.github.ben-manes.versions'
 
-// Use `com.foo.umbrella.weatherundergroundapikey` in gradle.properties or as a command line
-// parameter or `WEATHER_UNDERGROUND_API_KEY` as a System Environment variable to provide weather
-// underground api key to this project
 ext.weatherUndergroundApiKey = project.hasProperty('com.foo.umbrella.weatherundergroundapikey')?
-    project.getProperty('com.foo.umbrella.weatherundergroundapikey'):
-    System.getenv('WEATHER_UNDERGROUND_API_KEY')?:''
+        project.getProperty('com.foo.umbrella.weatherundergroundapikey'):
+        System.getenv('WEATHER_UNDERGROUND_API_KEY')?:''
 
 android {
   compileSdkVersion 25

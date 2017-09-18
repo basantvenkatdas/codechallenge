@@ -1,3 +1,11 @@
 <resources>
   <string name="app_name">Umbrella</string>
+  <string name="today">Today</string>
+  <string name="tomorrow">Tomorrow</string>
+  <string name="progressdialogmessage">Getting WeatherData Data</string>
+  <string name="enterzipcode">Enter the ZipCode</string>
+  <string name="units">Units</string>
+  <string name="zip">ZipCode</string>
+  <string name="errordialogtitle">Error</string>
+  <string name="fetcherrormessage">Error fetching Forecast from server for zip</string>
 </resources>
